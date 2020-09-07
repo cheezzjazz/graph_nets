@@ -1,0 +1,22 @@
+# Model parameters.
+num_processing_steps_tr = 5
+num_processing_steps_ge = 3
+
+# Data / training parameters.
+num_training_iterations = 100000
+batch_size_tr = 256
+batch_size_ge = 100
+num_time_steps = 50
+step_size = 0.1
+num_masses_min_max_tr = (5, 18)
+dist_between_masses_min_max_tr = (0.2, 1.0)
+
+# 4 + 9 masses 0.5m apart
+static_graph_ge = ([base_graph(4, 0.5)] + [base_graph(9, 0.5)])* int(batch_size_ge/2)#test3
+base_graph_4_9_ge = utils_tf.data_dicts_to_graphs_tuple(static_graph_ge)
+
+
+
+
+
+to change parameters

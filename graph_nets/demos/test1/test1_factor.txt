@@ -1,0 +1,3 @@
+# 4 + 9 masses 0.5m apart
+static_graph_ge = [base_graph(4, 0.5)] * int(batch_size_ge/2) + [base_graph(9, 0.5)] * int(batch_size_ge/2)
+base_graph_4_9_ge = utils_tf.data_dicts_to_graphs_tuple(static_graph_ge)
